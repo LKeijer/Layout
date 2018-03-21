@@ -29,7 +29,7 @@
         </Grid.ColumnDefinitions>
         <Button Content="The Test Button!" x:Name="TestBtn" Style="{StaticResource LoginBtn}" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="1" Click="TestBtn_Click"/>
         <Button Content="Add more information to your account" x:Name="AddInfoBtn" FontSize="10" Style="{StaticResource LoginBtn}" Grid.Column="5" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="1" Click="AddInfoBtn_Click"/>
-        <Button Content="Button" Style="{StaticResource LoginBtn}" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="1"/>
+        <Button Content="Collections" x:Name="CollectionsBtn" Style="{StaticResource LoginBtn}" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="1" Click="CollectionsBtn_Click"/>
         <Button Content="Change Password" x:Name="ChangePassBtn" Style="{StaticResource LoginBtn}" Grid.Column="5" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="1" Click="ChangePassBtn_Click"/>
         <Button Content="Button" Style="{StaticResource LoginBtn}" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2"/>
         <Button Content="Button" Style="{StaticResource LoginBtn}" Grid.Column="5" Grid.Row="6" Grid.ColumnSpan="2"/>

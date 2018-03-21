@@ -87,6 +87,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\CollectionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\MainMenuWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -128,8 +132,11 @@
     <Compile Include="DialogWindows\ChangePassDialog.xaml.cs">
       <DependentUpon>ChangePassDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DialogWindows\ChangePassword.cs" />
+    <Compile Include="DialogWindows\WindowFunctions.cs" />
     <Compile Include="TestClass.cs" />
+    <Compile Include="Windows\CollectionWindow.xaml.cs">
+      <DependentUpon>CollectionWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\MainMenuWindow.xaml.cs">
       <DependentUpon>MainMenuWindow.xaml</DependentUpon>
     </Compile>

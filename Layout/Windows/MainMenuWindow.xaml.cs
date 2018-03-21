@@ -25,6 +25,14 @@ namespace Layout.Windows
             UpdateUI();
         }
 
+        #region Methods
+        public void UpdateUI()
+        {
+            NameContentLbl.Content = Classes.Session.sessionUserName;
+        }
+        #endregion
+
+        #region Event Handlers
         private void TestBtn_Click(object sender, RoutedEventArgs e)
         {
             TestClass test = new TestClass();
@@ -40,10 +48,7 @@ namespace Layout.Windows
             AddDialog.Visibility = Visibility.Visible;
         }
 
-        public void UpdateUI()
-        {
-            NameContentLbl.Content = Classes.Session.sessionUserName;
-        }
+
 
         private void ChangePassBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -55,31 +60,28 @@ namespace Layout.Windows
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void LogoutBtn_Click(object sender, RoutedEventArgs e)
         {
-
-            //if(MessageBox.Show("Are you sure you want to log out?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Question))
             MessageBoxResult logoutResult = MessageBox.Show("Are you sure you want to logout?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if(logoutResult == MessageBoxResult.Yes)
             {
-                
                 Classes.Session.ClearSession();
                 MainWindow lw = new MainWindow();
                 
                 this.Visibility = Visibility.Collapsed;
                 lw.Visibility = Visibility.Visible;
-
-
             }
             else
             {
                 return;
             }
         }
+
+        private void CollectionsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Layout.Functions.UpdateWindow.CloseThisWindow(this);
+            Layout.Functions.UpdateWindow.OpenCollectionsWindow();
+        }
+        #endregion
     }
 }

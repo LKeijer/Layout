@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Layout.Classes
 {
-    class AdvancedUser
+    class AdvancedUser : Users
     {
     }
 }
