@@ -28,7 +28,9 @@ namespace Layout.Windows
         #region Methods
         public void UpdateUI()
         {
-            NameContentLbl.Content = Classes.Session.sessionUserName;
+            
+            //NameContentLbl.Content = Classes.Session.sessionUserName;
+            
         }
         #endregion
 

@@ -105,6 +105,7 @@
     </Compile>
     <Compile Include="Classes\AdvancedUser.cs" />
     <Compile Include="Classes\BasicUser.cs" />
+    <Compile Include="Classes\Collections.cs" />
     <Compile Include="Classes\Session.cs" />
     <Compile Include="Classes\Users.cs" />
     <Compile Include="DataBaseFront\DataBaseFront.cs" />

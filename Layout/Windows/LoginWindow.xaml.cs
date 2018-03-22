@@ -32,25 +32,17 @@ namespace Layout
         {
             if(db.ValidateLogin(this.UserNameTextBox.Text, this.UserPassTextBox.Password)) //Calls the method ValidateLogin which returns a bool value, the username and password are sent as parameters.
             {
-                Windows.MainMenu main = new Windows.MainMenu();
-                this.Visibility = Visibility.Collapsed;
-                main.Visibility = Visibility.Visible;
+                Layout.Functions.UpdateWindow.CloseThisWindow(this);
+                Layout.Functions.UpdateWindow.OpenMainMenuWindow();
+
+                //Windows.MainMenu main = new Windows.MainMenu();
+                //this.Visibility = Visibility.Collapsed;
+                //main.Visibility = Visibility.Visible;
             }
             else
             {
                 MessageBox.Show("Login Failed, try again!");
             }
-        }
-
-        private void LoginUserInput_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("Click!");
-            
-        }
-
-        private void LoginUserPassInput_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("Pass Click!");
         }
 
         private void RegisterBtn_CLick(object sender, MouseButtonEventArgs e)

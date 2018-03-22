@@ -10,15 +10,19 @@ namespace Layout.Functions
     
     public static class UpdateWindow
     {
-                                    /// <summary>
-                                    /// This needs improvement badly
-                                    /// </summary>
-                                    /// <param name="windowclose"></param>
+        #region Opening / Closing the windows logic
+
+        /// <summary>
+        /// This needs improvement badly
+        /// </summary>
+        /// <param name="windowclose"></param>
         public static void CloseThisWindow(object windowclose)  //Gets the window that calls this method as object.
         {
             string whatWindow = windowclose.GetType().ToString(); //Gets the string of the type of the object that was sent by calling the method.
             string mainMenuWindow = "Layout.Windows.MainMenu";
             string loginWindow =  "Layout.MainWindow";
+            string collectionWindow = "Layout.Windows.CollectionWindow";
+            string addInfoWindow = "DialogWindows.AddInfo";
 
             if(whatWindow == mainMenuWindow)    //Checks if its the MainMenu that called the method.
             {
@@ -30,7 +34,16 @@ namespace Layout.Functions
                 MainWindow main = (MainWindow)windowclose;
                 main.Visibility = Visibility.Collapsed;
             }
-
+            else if(whatWindow == collectionWindow)
+            {
+                Windows.CollectionWindow collWindow = (Windows.CollectionWindow)windowclose;
+                collWindow.Visibility = Visibility.Collapsed;
+            }
+            else if(whatWindow == addInfoWindow)
+            {
+                DialogWindows.AddInfo addWindow = (DialogWindows.AddInfo)windowclose;
+                addWindow.Visibility = Visibility.Collapsed;
+            }
 
         }
 
@@ -45,6 +58,7 @@ namespace Layout.Functions
             Windows.CollectionWindow collectionWindow = new Windows.CollectionWindow();
             collectionWindow.Visibility = Visibility.Visible;
         }
+        #endregion
 
     }
 

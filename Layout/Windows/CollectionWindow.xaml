@@ -27,6 +27,14 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
+        <TextBox x:Name="TextBox1" Background="{StaticResource LightBlue}" BorderBrush="Azure" BorderThickness="5" Grid.Column="1" Grid.Row="2"/>
+        <TextBox x:Name="TextBox2" Background="{StaticResource LightBlue}" BorderBrush="Azure" BorderThickness="5" Grid.Column="1" Grid.Row="3"/>
+        <TextBox x:Name="TextBox3" Background="{StaticResource LightBlue}" BorderBrush="Azure" BorderThickness="5" Grid.Column="1" Grid.Row="4"/>
+        <TextBox x:Name="TextBox4" Background="{StaticResource LightBlue}" BorderBrush="Azure" BorderThickness="5" Grid.Column="1" Grid.Row="5"/>
+        <TextBox x:Name="TextBox5" Background="{StaticResource LightBlue}" BorderBrush="Azure" BorderThickness="5" Grid.Column="1" Grid.Row="6"/>
+        <Button Content="Send into arraylist"  x:Name="SendIntoListArrayBtn" Style="{StaticResource LoginBtn}" Grid.Column="1" Grid.Row="7" Click="SendIntoListArrayBtn_Click"/>
+        <GroupBox x:Name="FirstRowGroupBox" Grid.ColumnSpan="2" Grid.Column="1" Header="GroupBox" HorizontalAlignment="Left" Height="283" Margin="0,31,0,0" Grid.Row="1" Grid.RowSpan="6" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Get info"  x:Name="GetInfoBtn" Style="{StaticResource ResourceKey=LoginBtn}" Grid.Column="2" Grid.Row="7" Click="GetInfoBtn_Click"/>
+
     </Grid>
 </Window>
